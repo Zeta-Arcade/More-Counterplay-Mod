@@ -1,4 +1,6 @@
 # Changelog
+## 1.5.0
+- Patched for v73
 
 ## 1.4.1
 

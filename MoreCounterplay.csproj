@@ -58,12 +58,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="Assembly-CSharp" Publicize="true">
-            <HintPath>lib\Assembly-CSharp.dll</HintPath>
-        </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>..\..\..\Documents\Projects\References\Lethal Data\Assembly-CSharp.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
-    <Target Name="NetcodePatch" AfterTargets="PostBuildEvent">
-        <Exec Command="netcode-patch &quot;$(TargetPath)&quot; @(ReferencePathWithRefAssemblies->'&quot;%(Identity)&quot;', ' ')" />
-    </Target>
+  <Target Name="NetcodePatch" AfterTargets="PostBuildEvent">
+    <Exec Command="netcode-patch -uv 2022.3.62 -nv 1.12.0 -tv 1.0.0 &quot;$(TargetPath)&quot; @(ReferencePathWithRefAssemblies->'&quot;%(Identity)&quot;', ' ')" />
+  </Target>
+
 </Project>

@@ -1,3 +1,5 @@
+## v73 Fork by ZetaArcade
+
 # More Counterplay for Lethal Company enemies
 
 Mod is fully configurable so you can disable or edit counterplays that you don't like.
